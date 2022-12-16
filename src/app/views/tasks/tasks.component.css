@@ -1,0 +1,27 @@
+.absolute{
+  position:absolute;
+}
+.relative{
+  position:relative;
+}
+.delete-section{
+  opacity:0;
+  bottom:0.5rem;
+  right:5.5rem;
+}
+tr:hover td .delete-section{
+  opacity:1;
+}
+.plus-btn{
+  float:right;
+}
+.red{
+  color:red;
+}
+.green{
+  color:green;
+}
+.completed{
+  text-decoration: line-through;
+  color:#797979;
+}

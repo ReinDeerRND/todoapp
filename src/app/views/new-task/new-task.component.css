@@ -1,0 +1,32 @@
+.higher-layer{
+  position:absolute;
+  right:50%;
+  top:0;
+  min-width:20rem;
+}
+.label-font{
+  font-size:1.1rem;
+  padding: .6rem;
+}
+
+.select-list{
+  padding: .5rem;
+    width: 7rem;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+
+}
+.select-list option{
+  padding: .6rem;
+
+}
+.select-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.date-control{
+  margin: 1rem .6rem;
+  padding: .3rem;
+}

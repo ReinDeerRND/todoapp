@@ -1,0 +1,84 @@
+<div [class.invisible]="!visibleMenu" [class.visible]="visibleMenu">
+  <div class="higher-layer">
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header card-header-primary">
+                <h4 class="card-title">Новая задача</h4>
+              </div>
+              <div class="card-body">
+                <form [formGroup]="taskForm">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label class="label-font">Введите описание</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          formControlName="taskContent"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 select-group">
+                      <div>
+                        <label class="label-font">Категория</label>
+                        <select class="select-list" formControlName="category">
+                          <option
+                            class="form-control"
+                            *ngFor="let cat of categories"
+                            [value]="cat.title"
+                          >
+                            {{ cat.title }}
+                          </option>
+                        </select>
+                      </div>
+                      <div>
+                        <label class="label-font">Приоритет</label>
+                        <select class="select-list" formControlName="priority">
+                          <option
+                            class="form-control"
+                            *ngFor="let p of priorities"
+                            [value]="p.title"
+                          >
+                            {{ p.title }}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 select-group">
+                      <div>
+                        <label class="label-font">Дата завершения задачи</label>
+                        <input
+                          type="date"
+                          class="date-control"
+                          formControlName="taskDate"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-light pull-left" (click)="closeMenu()">
+                    Отмена
+                  </button>
+                  <button
+                    class="btn btn-primary pull-right"
+                    (click)="addAndCloseMenu()"
+                  >
+                    Добавить задание
+                  </button>
+                  <div class="clearfix"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
